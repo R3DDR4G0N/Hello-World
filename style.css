@@ -1,4 +1,4 @@
-/* Reset */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Background */
+/* ===== BODY BACKGROUND ===== */
 body {
     height: 100vh;
     background: linear-gradient(135deg, #4facfe, #00f2fe);
@@ -15,9 +15,9 @@ body {
     align-items: center;
 }
 
-/* Container */
+/* ===== MAIN BOX ===== */
 .signup-box {
-    background: white;
+    background: #fff;
     padding: 40px;
     width: 350px;
     border-radius: 15px;
@@ -25,41 +25,47 @@ body {
     text-align: center;
 }
 
-/* Heading */
+/* ===== HEADINGS ===== */
 .signup-box h2 {
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .signup-box p {
     color: gray;
     margin-bottom: 20px;
+    font-size: 14px;
 }
 
-/* Input group */
+/* ===== INPUT GROUP ===== */
 .input-group {
     position: relative;
     margin: 20px 0;
 }
 
+/* INPUT FIELD */
 .input-group input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 5px;
     border: none;
     border-bottom: 2px solid #ccc;
     outline: none;
     font-size: 16px;
+    background: transparent;
 }
 
+/* LABEL */
 .input-group label {
     position: absolute;
     top: 10px;
-    left: 0;
+    left: 5px;
     color: gray;
+    font-size: 14px;
     pointer-events: none;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-/* Floating label effect */
+/* FLOATING EFFECT */
 .input-group input:focus ~ label,
 .input-group input:valid ~ label {
     top: -10px;
@@ -67,7 +73,12 @@ body {
     color: #4facfe;
 }
 
-/* Button */
+/* INPUT FOCUS BORDER */
+.input-group input:focus {
+    border-bottom: 2px solid #4facfe;
+}
+
+/* ===== BUTTON ===== */
 button {
     width: 100%;
     padding: 12px;
@@ -77,14 +88,14 @@ button {
     font-size: 16px;
     border-radius: 25px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 button:hover {
     background: #00c6ff;
 }
 
-/* Login link */
+/* ===== LOGIN LINK ===== */
 .login-link {
     margin-top: 15px;
     font-size: 14px;
@@ -93,8 +104,46 @@ button:hover {
 .login-link a {
     color: #4facfe;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .login-link a:hover {
     text-decoration: underline;
+}
+
+/* ===== OPTIONS (LOGIN PAGE) ===== */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin: 10px 0 20px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.options input {
+    accent-color: #4facfe;
+}
+
+.options a {
+    text-decoration: none;
+    color: #4facfe;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 400px) {
+    .signup-box {
+        width: 90%;
+        padding: 25px;
+    }
 }
